@@ -1,0 +1,47 @@
+{
+  "extends": ["@shein"],
+  "rules": {
+    "max-len": ["error", 140],
+    "react/jsx-wrap-multilines": "off",
+    "react/default-props-match-prop-types": "off",
+    "no-param-reassign": "off",
+    "consistent-return": "warn",
+    "react/jsx-filename-extension": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "webpack": {
+        "config": "webpack.base.config.js"
+      }
+    }
+  },
+  "parser": "babel-eslint",
+  "overrides": [
+    {
+      "files": "types.js",
+      "rules": {
+        "import/no-mutable-exports": "off"
+      }
+    },
+    {
+      "files": ["webpack.*.js"],
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
+      }
+    },
+    {
+      "files": ["reducers.js"],
+      "rules": {
+        "no-param-reassign": "off"
+      }
+    }
+  ],
+  "env": {
+    "browser": true
+  },
+  "globals": {
+    "process": true,
+    "__ROOT_REDUCER__": true,
+    "__ROOT_SAGA__": true
+  }
+}

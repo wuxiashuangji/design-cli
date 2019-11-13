@@ -1,2 +1,0 @@
-# -zarm-design-cli
-cli
